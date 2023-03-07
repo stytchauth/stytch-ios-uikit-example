@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "phonenumberkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/marmelroy/PhoneNumberKit",
+      "state" : {
+        "revision" : "434a7432cceca19829bc6e34bdcfc0b0ee4c6801",
+        "version" : "3.5.7"
+      }
+    },
+    {
+      "identity" : "stytch-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stytchauth/stytch-swift",
+      "state" : {
+        "revision" : "175e8fd25fbf3bf4cc3c985d72c1167d5a8f799c",
+        "version" : "0.8.0"
+      }
+    }
+  ],
+  "version" : 2
+}
