@@ -6,6 +6,14 @@ final class PhoneNumberInput: UIView {
 
     var onTextChanged: (Bool) -> Void = { _ in }
 
+    var phoneNumberE164: String? {
+        textField.phoneNumber.map { "+\($0.countryCode)\($0.nationalNumber)" }
+    }
+
+    var formattedPhoneNumber: String? {
+        textField.phoneNumber.map { "+\($0.countryCode) \($0.numberString)"}
+    }
+
     private let inputStack: UIStackView = {
         let view = UIStackView()
         view.axis = .horizontal
