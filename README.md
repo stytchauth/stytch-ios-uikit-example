@@ -1,8 +1,8 @@
 # Stytch iOS UIKit example application
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/100632220/217049841-b9eeb72a-3e50-4074-839a-e64ee5d4a88c.png" width="750">
-</p> FIXME
+  <img src="https://user-images.githubusercontent.com/99769393/224113293-3a0c810b-060b-4b77-914f-8e34d29369df.png" height="400">
+</p>
 
 ## Overview
 
@@ -25,16 +25,15 @@ Follow the steps below to get this application fully functional and running usin
    - Click **Enable SDK in Test**.
    - Under **Authorized applications** add the Bundle ID `com.stytch.UIKitExample`.
      
-     <img width="400" alt="Authorized environments" src="https://user-images.githubusercontent.com/100632220/217052985-2e6fc264-7b8b-452b-9d24-66a76c143d10.png"> FIXME
+     <img width="400" alt="Authorized applications" src="https://user-images.githubusercontent.com/99769393/224113711-4b66b298-c92d-4ee8-a0f3-991253d73eff.jpg">
 
 1. Navigate to [Redirect URLs](https://stytch.com/dashboard/redirect-urls), and add `uikit-example://login` as type **Login** and `uikit-example://signup` as type **Sign-up**.
    
-   <img width="400" alt="Redirect URLs" src="https://user-images.githubusercontent.com/100632220/217054016-913cabda-098e-4436-9829-2f33e7db05a7.png"> FIXME
+   <img width="400" alt="Redirect URLs" src="https://user-images.githubusercontent.com/99769393/224113848-bf673aa0-5299-488f-9aff-e78fea636e2b.jpg">
 
 1. Navigate to [OAuth](https://stytch.com/dashboard/oauth), and set up login for Apple and Google in the Test environment. Follow all the instructions provided in the Dashboard. If you are not interested in OAuth login you can skip this step. However, the _Continue with Apple_ and _Continue with Google_ buttons in this application will not work. _NOTE: for this example app's Apple OAuth config, only Team ID and Application ID fields require real data, the other fields can be stubbed out with fake data._
  
-   <img width="400" alt="OAuth configuration" src="https://user-images.githubusercontent.com/100632220/217055674-a7dafc17-6ad3-492f-8dd2-92560d60dc00.png">
-
+   <img width="600" alt="OAuth configuration" src="https://user-images.githubusercontent.com/99769393/224114896-2c4862d7-38b2-47b3-bff5-3d41a6abf995.jpg">
 1. Finally, navigate to [API Keys](https://stytch.com/dashboard/api-keys), and copy your `public_token`. You will need this value later on.
 
 ### On your machine
