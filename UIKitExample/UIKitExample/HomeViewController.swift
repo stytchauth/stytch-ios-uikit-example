@@ -8,6 +8,12 @@ final class HomeViewController: UIViewController {
         logOut()
     }
 
+    override func addChild(_ controller: UIViewController) {
+        super.addChild(controller)
+        view.addSubview(controller.view)
+        controller.view.frame = view.bounds
+    }
+
     func logOut() {
         removeChildren()
         addChild(AuthHomeViewController())
@@ -18,12 +24,6 @@ final class HomeViewController: UIViewController {
         let controller = AuthenticatedViewController()
         controller.configure(authResponse: response)
         addChild(controller)
-    }
-
-    override func addChild(_ controller: UIViewController) {
-        super.addChild(controller)
-        view.addSubview(controller.view)
-        controller.view.frame = view.bounds
     }
 
     private func removeChildren() {
