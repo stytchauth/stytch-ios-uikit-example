@@ -23,6 +23,7 @@
 		225477D029B80998003DF229 /* OTPCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225477CF29B80998003DF229 /* OTPCodeViewController.swift */; };
 		225477D329B943B1003DF229 /* AuthenticatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225477D229B943B1003DF229 /* AuthenticatedViewController.swift */; };
 		225477D529B96C4D003DF229 /* ContentItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225477D429B96C4D003DF229 /* ContentItemCell.swift */; };
+		225477D729B96E5A003DF229 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 225477D629B96E5A003DF229 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		225477D129B815F7003DF229 /* UIKitExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UIKitExample.entitlements; sourceTree = "<group>"; };
 		225477D229B943B1003DF229 /* AuthenticatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedViewController.swift; sourceTree = "<group>"; };
 		225477D429B96C4D003DF229 /* ContentItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentItemCell.swift; sourceTree = "<group>"; };
+		225477D629B96E5A003DF229 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				225477D229B943B1003DF229 /* AuthenticatedViewController.swift */,
 				225477D429B96C4D003DF229 /* ContentItemCell.swift */,
 				225477CD29B80951003DF229 /* AuthHomeViewController.swift */,
+				225477D629B96E5A003DF229 /* README.md */,
 				225477CF29B80998003DF229 /* OTPCodeViewController.swift */,
 				225477CB29B7F8C0003DF229 /* CGFloat+UIKitExample.swift */,
 				225477C929B7F89B003DF229 /* UIColor+UIKitExample.swift */,
@@ -165,6 +168,7 @@
 			files = (
 				225477B829B6C6B2003DF229 /* LaunchScreen.storyboard in Resources */,
 				225477B529B6C6B2003DF229 /* Assets.xcassets in Resources */,
+				225477D729B96E5A003DF229 /* README.md in Resources */,
 				225477B329B6C6B1003DF229 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

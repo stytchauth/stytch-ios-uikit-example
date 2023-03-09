@@ -177,6 +177,8 @@ final class OTPCodeViewController: UIViewController {
                 codeExpiry = Date().addingTimeInterval(120)
                 let result = try await StytchClient.otps.loginOrCreate(parameters: .init(deliveryMethod: .sms(phoneNumber: phoneNumberE164), expiration: 2))
                 methodId = result.methodId
+            } catch {
+                print(error)
             }
         }
     }

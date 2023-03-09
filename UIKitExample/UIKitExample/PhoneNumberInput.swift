@@ -30,6 +30,7 @@ final class PhoneNumberInput: UIView {
 
     private lazy var textField: PhoneNumberTextField = {
         let field = PhoneNumberTextField()
+        field.textContentType = .telephoneNumber
         field.withDefaultPickerUI = true
         field.withPrefix = false
         field.withExamplePlaceholder = true

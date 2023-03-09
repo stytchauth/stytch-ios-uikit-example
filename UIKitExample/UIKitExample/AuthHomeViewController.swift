@@ -119,44 +119,56 @@ final class AuthHomeViewController: UIViewController {
 
     @objc private func didTapGoogle() {
         Task {
-            let (token, url) = try await StytchClient.oauth.google.start(
-                parameters: StytchClient.OAuth.ThirdParty.WebAuthSessionStartParameters(
-                    loginRedirectUrl: URL(string: "uikit-example://login")!,
-                    signupRedirectUrl: URL(string: "uikit-example://signup")!
+            do {
+                let (token, url) = try await StytchClient.oauth.google.start(
+                    parameters: StytchClient.OAuth.ThirdParty.WebAuthSessionStartParameters(
+                        loginRedirectUrl: URL(string: "uikit-example://login")!,
+                        signupRedirectUrl: URL(string: "uikit-example://signup")!
+                    )
                 )
-            )
-            let result = try await StytchClient.oauth.authenticate(parameters: .init(token: token))
-            print(url.pathComponents.last == "login" ? "Welcome back!" : "Welcome")
-            authenticate(response: result)
+                let result = try await StytchClient.oauth.authenticate(parameters: .init(token: token))
+                print(url.pathComponents.last == "login" ? "Welcome back!" : "Welcome")
+                authenticate(response: result)
+            } catch {
+                print(error)
+            }
         }
     }
 
     @objc private func didTapApple() {
         Task {
-            let result = try await StytchClient.oauth.apple.start(parameters: .init())
-            authenticate(response: result)
+            do {
+                let result = try await StytchClient.oauth.apple.start(parameters: .init())
+                authenticate(response: result)
+            } catch {
+                print(error)
+            }
         }
     }
 
     @objc private func didTapContinue() {
         Task {
-            guard let phoneNumber = phoneNumberInput.phoneNumberE164 else { return }
+            do {
+                guard let phoneNumber = phoneNumberInput.phoneNumberE164 else { return }
 
-            let codeExpiry = Date().addingTimeInterval(120)
+                let codeExpiry = Date().addingTimeInterval(120)
 
-            let result = try await StytchClient.otps.loginOrCreate(parameters: .init(deliveryMethod: .sms(phoneNumber: phoneNumber), expiration: 2))
+                let result = try await StytchClient.otps.loginOrCreate(parameters: .init(deliveryMethod: .sms(phoneNumber: phoneNumber), expiration: 2))
 
-            let controller = OTPCodeViewController()
-            controller.configure(
-                phoneNumberE164: phoneNumber,
-                formattedPhoneNumber: phoneNumberInput.formattedPhoneNumber!,
-                methodId: result.methodId,
-                codeExpiry: codeExpiry
-            ) { [weak self, weak controller] response in
-                controller?.dismiss(animated: true)
-                self?.authenticate(response: response)
+                let controller = OTPCodeViewController()
+                controller.configure(
+                    phoneNumberE164: phoneNumber,
+                    formattedPhoneNumber: phoneNumberInput.formattedPhoneNumber!,
+                    methodId: result.methodId,
+                    codeExpiry: codeExpiry
+                ) { [weak self, weak controller] response in
+                    controller?.dismiss(animated: true)
+                    self?.authenticate(response: response)
+                }
+                self.present(controller, animated: true)
+            } catch {
+                print(error)
             }
-            self.present(controller, animated: true)
         }
     }
 
