@@ -22,6 +22,7 @@
 		225477CE29B80951003DF229 /* AuthHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225477CD29B80951003DF229 /* AuthHomeViewController.swift */; };
 		225477D029B80998003DF229 /* OTPCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225477CF29B80998003DF229 /* OTPCodeViewController.swift */; };
 		225477D329B943B1003DF229 /* AuthenticatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225477D229B943B1003DF229 /* AuthenticatedViewController.swift */; };
+		225477D529B96C4D003DF229 /* ContentItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225477D429B96C4D003DF229 /* ContentItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		225477CF29B80998003DF229 /* OTPCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCodeViewController.swift; sourceTree = "<group>"; };
 		225477D129B815F7003DF229 /* UIKitExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UIKitExample.entitlements; sourceTree = "<group>"; };
 		225477D229B943B1003DF229 /* AuthenticatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedViewController.swift; sourceTree = "<group>"; };
+		225477D429B96C4D003DF229 /* ContentItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				225477AD29B6C6B1003DF229 /* SceneDelegate.swift */,
 				225477AF29B6C6B1003DF229 /* HomeViewController.swift */,
 				225477D229B943B1003DF229 /* AuthenticatedViewController.swift */,
+				225477D429B96C4D003DF229 /* ContentItemCell.swift */,
 				225477CD29B80951003DF229 /* AuthHomeViewController.swift */,
 				225477CF29B80998003DF229 /* OTPCodeViewController.swift */,
 				225477CB29B7F8C0003DF229 /* CGFloat+UIKitExample.swift */,
@@ -173,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225477D529B96C4D003DF229 /* ContentItemCell.swift in Sources */,
 				225477C629B7BC08003DF229 /* PhoneNumberInput.swift in Sources */,
 				225477CE29B80951003DF229 /* AuthHomeViewController.swift in Sources */,
 				225477CA29B7F89B003DF229 /* UIColor+UIKitExample.swift in Sources */,
