@@ -35,8 +35,6 @@ final class AuthHomeViewController: UIViewController {
         button.setTitleColor(.placeholder, for: .disabled)
         button.setTitle("Continue", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
-        button.layer.cornerRadius = .cornerRadius
-        button.layer.masksToBounds = true
         button.isEnabled = false
         return button
     }()

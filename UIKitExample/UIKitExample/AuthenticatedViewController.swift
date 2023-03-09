@@ -31,8 +31,6 @@ final class AuthenticatedViewController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.setTitle("Log out", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
-        button.layer.cornerRadius = .cornerRadius
-        button.layer.masksToBounds = true
         return button
     }()
 

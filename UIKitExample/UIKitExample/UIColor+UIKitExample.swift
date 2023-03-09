@@ -10,10 +10,17 @@ extension UIColor {
 }
 
 extension UIColor {
-    func image(_ size: CGSize = CGSize(width: 1, height: 1)) -> UIImage {
+    func image(
+        size: CGSize = CGSize(width: 2 * .cornerRadius, height: 2 * .cornerRadius),
+        cornerRadius: CGFloat = .cornerRadius
+    ) -> UIImage {
         UIGraphicsImageRenderer(size: size).image { context in
             setFill()
-            context.fill(CGRect(origin: .zero, size: size))
-        }
+            let rect = CGRect(origin: .zero, size: size)
+            UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
+            context.fill(rect)
+        }.resizableImage(
+            withCapInsets: .init(top: cornerRadius, left: cornerRadius, bottom: cornerRadius, right: cornerRadius)
+        )
     }
 }
