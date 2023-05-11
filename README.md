@@ -1,7 +1,7 @@
 # Stytch iOS UIKit example application
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/99769393/224113293-3a0c810b-060b-4b77-914f-8e34d29369df.png" height="400">
+  <img src="https://github.com/stytchauth/stytch-ios-uikit-example/assets/99769393/e73cea5c-da47-4f74-b28e-da4d550b4d8d" height="400">
 </p>
 
 ## Overview
